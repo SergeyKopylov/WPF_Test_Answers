@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Test_Answers"
-            xmlns:UserControls="clr-namespace:WPF_Test_Answers.UserControls" x:Class="WPF_Test_Answers.MainWindow"
-
+        xmlns:UserControls="clr-namespace:WPF_Test_Answers.UserControls" x:Class="WPF_Test_Answers.MainWindow"
         mc:Ignorable="d"
         Title="WPF Test" Height="220" Width="300">
     <Window.Resources>

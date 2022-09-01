@@ -22,17 +22,39 @@ namespace WPF_Test_Answers.UserControls
     {
         public Button_UserControl()
         {
+
             InitializeComponent();
+//            myvar = UC_Rectangle.Width;
         }
 
-        private void UC_Rectangle_MouseLeave(object sender, MouseEventArgs e)
+        //private double myvar;
+
+	    public double myproperty
+	    {
+		    get { return UC_Rectangle.Width;}
+		    set { UC_Rectangle.Width = value;}
+	    }
+        /*
+        public double RectWidth
         {
+            get
+            {
+                return (double)GetValue(RectWidthProperty);
+            }
+            set
+            {
+                SetValue(RectWidthProperty, value);
+            }
         }
 
+        public static readonly DependencyProperty RectWidthProperty = 
+               DependencyProperty.Register("RectWidth", typeof(double), 
+               typeof(Button_UserControl), new PropertyMetadata(0));
+        */
         private void UC_Grid_MouseEnter(object sender, MouseEventArgs e)
         {
-            Brush MouseOver_Background = new BrushConverter().ConvertFromString("#FFBEE6FD") as Brush;
-            Brush MouseOver_Border = new BrushConverter().ConvertFromString("#FF3C7FB1") as Brush;
+            Brush? MouseOver_Background = new BrushConverter().ConvertFromString("#FFBEE6FD") as Brush;
+            Brush? MouseOver_Border = new BrushConverter().ConvertFromString("#FF3C7FB1") as Brush;
 
             UC_Rectangle.Stroke = MouseOver_Border;
             UC_Rectangle.Fill = MouseOver_Background;
@@ -40,8 +62,8 @@ namespace WPF_Test_Answers.UserControls
 
         private void UC_Grid_MouseLeave(object sender, MouseEventArgs e)
         {
-            Brush MouseOver_Background = new BrushConverter().ConvertFromString("#FFDDDDDD") as Brush;
-            Brush MouseOver_Border = new BrushConverter().ConvertFromString("#FF707070") as Brush;
+            Brush? MouseOver_Background = new BrushConverter().ConvertFromString("#FFDDDDDD") as Brush;
+            Brush? MouseOver_Border = new BrushConverter().ConvertFromString("#FF707070") as Brush;
 
             UC_Rectangle.Stroke = MouseOver_Border;
             UC_Rectangle.Fill = MouseOver_Background;
